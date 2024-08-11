@@ -107,3 +107,21 @@ Operator Description Example
 ⚡️ Additional Notes
 Weak Typing: JavaScript is weakly typed, meaning variable types are determined at runtime. It allows implicit type conversions, which can sometimes lead to unexpected behavior.
 Dynamic Nature: JavaScript is dynamic, so variables can be reassigned to values of different types without explicit declarations.
+
+### 📊 Data Types in JavaScript
+
+JavaScript provides several fundamental data types that you can use to store and manipulate different kinds of data. Here are some of the primary ones:
+
+- Numbers
+  The Number data type is used for both integer and floating-point values.
+
+let age = 25; // Integer
+let price = 19.99; // Floating-point number
+
+- Strings
+  The String data type is used to represent text. Strings can be defined using single quotes ('...'), double quotes ("..."), or backticks (`...`).
+
+> let greeting = 'Hello';
+> let name = "Shashi";
+> let message = `Welcome, ${name}!`; // Template literals (using backticks)
+> Tip: Use backticks (`...`) for template literals when you need to include variables or expressions >directly within the string using ${...} syntax.
