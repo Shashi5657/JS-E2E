@@ -170,3 +170,43 @@ Some functions are designed to return a value, which can then be stored in a var
 > myFunction();
 > console.log(globalVar); // Accessible
 > console.log(localVar); // Error: localVar is not defined
+
+- Imagine you’re putting items together:
+
+- If you have a 3 and a "3" and try to add them with a + sign, JavaScript thinks, “Oh, you want to combine these like words!” So, you get "33"—a combined string, not a real sum.
+
+- But if you use - or \* or /, JavaScript thinks, “This must be math!” So, it treats "3" like a number:
+
+- 3 - "3" gives 0
+- 3 \* "3" gives 9
+- 3 / "3" gives 1
+- Only + tries to combine instead of adding, making it a string.
+
+### 🔍 Built-in Methods in JavaScript
+
+- JavaScript provides several built-in methods that help with common tasks like type conversion and data manipulation. Here are a few essential ones:
+
+1. parseInt()
+   Converts a string to an integer. If the string contains non-numeric characters after the number, it ignores them.
+
+> const integer = parseInt("42"); // Output: 42
+> const withText = parseInt("42px"); // Output: 42
+
+2. parseFloat()
+
+- Converts a string to a decimal (floating-point number). Useful when you need to parse numbers with decimal points.
+
+> const decimal = parseFloat("3.14"); // Output: 3.14
+> const withText = parseFloat("3.14px"); // Output: 3.14
+
+3. toString()
+
+- Converts numbers, arrays, or other data types into a string.
+
+> const num = 42;
+> const numString = num.toString(); // Output: "42"
+>
+> const arr = [1, 2, 3];
+> const arrString = arr.toString(); // Output: "1,2,3"
+>
+> > Tip: These methods are particularly useful for handling type conversion when dealing with user input or data transformations.
