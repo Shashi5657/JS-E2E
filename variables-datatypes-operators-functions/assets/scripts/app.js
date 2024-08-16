@@ -19,8 +19,11 @@ let defaultResult = 0;
 let currentResult = defaultResult;
 
 function add() {
-  currentResult += parseInt(userInput.value);
-  outputResult(currentResult, "");
+  let enteredNumber = parseInt(userInput.value);
+  const calcDescription = `${currentResult} + ${enteredNumber}`;
+  currentResult += parseInt(enteredNumber);
+  outputResult(currentResult, calcDescription);
+  userInput.value = null;
 }
 
 addBtn.addEventListener("click", add);
