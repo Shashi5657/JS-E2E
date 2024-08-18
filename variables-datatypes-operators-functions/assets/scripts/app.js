@@ -62,7 +62,19 @@ addBtn.addEventListener("click", () => {
     add();
   }
 });
-subtractBtn.addEventListener("click", subtract);
-multiplyBtn.addEventListener("click", multiply);
-divideBtn.addEventListener("click", divide);
+subtractBtn.addEventListener("click", () => {
+  if (userInput.value && userInput.value !== "0") {
+    subtract();
+  }
+});
+multiplyBtn.addEventListener("click", () => {
+  if (userInput.value && userInput.value !== "0") {
+    multiply();
+  }
+});
+divideBtn.addEventListener("click", () => {
+  if (userInput.value && userInput.value !== "0") {
+    divide();
+  }
+});
 clearButton.addEventListener("click", clearAll);

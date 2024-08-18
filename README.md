@@ -182,7 +182,7 @@ Some functions are designed to return a value, which can then be stored in a var
 - 3 / "3" gives 1
 - Only + tries to combine instead of adding, making it a string.
 
-### 🔍 Built-in Methods in JavaScript
+## ***🔍 Built-in Methods in JavaScript***
 
 - JavaScript provides several built-in methods that help with common tasks like type conversion and data manipulation. Here are a few essential ones:
 
