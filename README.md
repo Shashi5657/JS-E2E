@@ -112,19 +112,41 @@ Dynamic Nature: JavaScript is dynamic, so variables can be reassigned to values 
 
 JavaScript provides several fundamental data types that you can use to store and manipulate different kinds of data. Here are some of the primary ones:
 
-- Numbers
-  The Number data type is used for both integer and floating-point values.
+1. Numbers
+   The Number data type is used for both integer and floating-point values.
 
 let age = 25; // Integer
 let price = 19.99; // Floating-point number
 
-- Strings
-  The String data type is used to represent text. Strings can be defined using single quotes ('...'), double quotes ("..."), or backticks (`...`).
+2. Strings
+   The String data type is used to represent text. Strings can be defined using single quotes ('...'), double quotes ("..."), or backticks (`...`).
 
 > let greeting = 'Hello';
 > let name = "Shashi";
 > let message = `Welcome, ${name}!`; // Template literals (using backticks)
 > Tip: Use backticks (`...`) for template literals when you need to include variables or expressions >directly within the string using ${...} syntax.
+
+3. Booleans
+   The Boolean data type has two possible values: true or false. Booleans are commonly used for conditional statements.
+
+> let isAvailable = true;
+> let hasAccess = false;
+
+4. Objects
+   An Object is a complex data type that allows you to store collections of properties, where each property has a key-value pair. Objects are useful for representing real-world entities with multiple attributes.
+
+> let person = {
+> name: "Shashi",
+> age: 25,
+> isStudent: true
+> };
+> console.log(person.name); // Output: Shashi
+
+5. Arrays
+   An Array is a special type of object that allows you to store multiple values in a single variable. Each value (or "element") in an array has an index, starting from 0.
+
+> let colors = ["red", "green", "blue"];
+> console.log(colors[0]); // Output: red
 
 ### 🔧 Functions in JavaScript
 
@@ -151,6 +173,27 @@ Some functions are designed to return a value, which can then be stored in a var
 
 > const value = addNumbers(2, 3); // Output: 5
 > console.log(value); // Output: 5
+
+**_Arrow Functions_**
+Arrow functions provide a shorter syntax for writing functions, introduced in ES6. They’re particularly useful for anonymous functions and are often used in callbacks.
+
+> const addNumbers = (num1, num2) => {
+> return num1 + num2;
+> };
+
+// Simplified version when the function contains a single expression
+
+> const addNumbers = (num1, num2) => num1 + num2;
+> console.log(addNumbers(2, 3)); // Output: 5
+> Note: Arrow functions inherit the this value from their surrounding context, which can be beneficial for handling scope in certain situations.
+
+**_Latest Way: Function Expressions_**
+Function expressions allow functions to be assigned to variables, enabling more flexibility when managing and passing functions as values.
+
+> const greet = function(name) {
+> return `Hello, ${name}!`;
+> };
+> console.log(greet("Shashi")); // Output: Hello, Shashi!
 
 #### Scope in JavaScript Functions
 
@@ -182,7 +225,7 @@ Some functions are designed to return a value, which can then be stored in a var
 - 3 / "3" gives 1
 - Only + tries to combine instead of adding, making it a string.
 
-## ***🔍 Built-in Methods in JavaScript***
+## **_🔍 Built-in Methods in JavaScript_**
 
 - JavaScript provides several built-in methods that help with common tasks like type conversion and data manipulation. Here are a few essential ones:
 
