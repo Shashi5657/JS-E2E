@@ -148,6 +148,26 @@ let price = 19.99; // Floating-point number
 > let colors = ["red", "green", "blue"];
 > console.log(colors[0]); // Output: red
 
+6. undefined
+   The undefined data type represents a variable that has been declared but not assigned a value. Any uninitialized variable has the value undefined by default.
+
+> let score;
+> console.log(score); // Output: undefined
+
+7. null
+   The null data type represents an intentional absence of any value. Unlike undefined, null is assigned by the programmer to indicate "no value."
+
+> let response = null;
+> console.log(response); // Output: null
+
+8. NaN (Not-a-Number)
+   NaN is a special value that represents an invalid number or an operation that doesn’t result in a valid number, like dividing a string by a number.
+
+> let invalidOperation = "hello" / 2;
+> console.log(invalidOperation); // Output: NaN
+>
+> > Note: NaN is of type number, even though it signifies an invalid numeric result.
+
 ### 🔧 Functions in JavaScript
 
 - Functions are reusable blocks of code designed to perform specific tasks. They allow for modular, organized, and interactive code. Here’s an overview of how to define and use functions in JavaScript.
