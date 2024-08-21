@@ -1,24 +1,27 @@
-// // alert("This is from the app.js file");
-// const defaultResult = 0;
-// let currentResult = defaultResult;
-
-// function addNumbers(num1, num2) {
-//   const result = num1 + num2;
-//   return result;
-// }
-
-// addNumbers(10, 12);
-
-// currentResult = ((currentResult + 10) * 3) / 2 - 1;
-
-// let calculationDescription = `(${defaultResult} + 10) * 3/2 - 1`;
-
-// outputResult(currentResult, calculationDescription);
-
 let defaultResult = 0;
 let currentResult = defaultResult;
 let logEntries = [];
 
+const calculateResult = (calculationType) => {
+  let enteredNumber = parseInt(userInput.value);
+  const initialResult = currentResult;
+  let mathOperator;
+  if (calculationType === "ADD") {
+    currentResult += parseInt(enteredNumber);
+    mathOperator = "+";
+  } else if (calculationType === "SUBTRACT") {
+    currentResult -= parseInt(enteredNumber);
+    mathOperator = "-";
+  } else if (calculationType === "MULTIPLY") {
+    currentResult *= parseInt(enteredNumber);
+    mathOperator = "*";
+  } else {
+    currentResult /= parseInt(enteredNumber);
+    mathOperator = "/";
+  }
+  createAndWriteOutput(initialResult, mathOperator, enteredNumber);
+  createLog(calculationType, initialResult, enteredNumber, currentResult);
+};
 const createAndWriteOutput = (currentValue, operator, newValue) => {
   const calcDescription = `${currentValue} ${operator} ${newValue}`;
   outputResult(currentResult, calcDescription);
@@ -43,35 +46,19 @@ const createLog = (
 };
 
 function add() {
-  let enteredNumber = parseInt(userInput.value);
-  const initialResult = currentResult;
-  currentResult += parseInt(enteredNumber);
-  createAndWriteOutput(initialResult, "+", enteredNumber);
-  createLog("Sum", initialResult, enteredNumber, currentResult);
+  calculateResult("ADD");
 }
 
 function subtract() {
-  let enteredNumber = parseInt(userInput.value);
-  const initialResult = currentResult;
-  currentResult -= parseInt(enteredNumber);
-  createAndWriteOutput(initialResult, "-", enteredNumber);
-  createLog("Subtract", initialResult, enteredNumber, currentResult);
+  calculateResult("SUBTRACT");
 }
 
 function multiply() {
-  let enteredNumber = parseInt(userInput.value);
-  const initialResult = currentResult;
-  currentResult *= parseInt(enteredNumber);
-  createAndWriteOutput(initialResult, "*", enteredNumber);
-  createLog("Multiply", initialResult, enteredNumber, currentResult);
+  calculateResult("MULTIPLY");
 }
 
 function divide() {
-  let enteredNumber = parseInt(userInput.value);
-  const initialResult = currentResult;
-  currentResult /= parseInt(enteredNumber);
-  createAndWriteOutput(initialResult, "/", enteredNumber);
-  createLog("Divide", initialResult, enteredNumber, currentResult);
+  calculateResult("DIVIDE");
 }
 
 const clearAll = () => {
