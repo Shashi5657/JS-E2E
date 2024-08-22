@@ -5,6 +5,15 @@ let logEntries = [];
 const calculateResult = (calculationType) => {
   let enteredNumber = parseInt(userInput.value);
   const initialResult = currentResult;
+
+  if (
+    calculationType !== "ADD" &&
+    calculationType !== "SUBTRACT" &&
+    calculationType !== "MULTIPLY" &&
+    calculationType !== "DIVIDE"
+  ) {
+    return;
+  }
   let mathOperator;
   if (calculationType === "ADD") {
     currentResult += parseInt(enteredNumber);
@@ -42,7 +51,6 @@ const createLog = (
   };
 
   logEntries.push(logEntry);
-  console.log(logEntries);
 };
 
 function add() {
@@ -58,7 +66,7 @@ function multiply() {
 }
 
 function divide() {
-  calculateResult("DIVIDE");
+  calculateResult("DIV");
 }
 
 const clearAll = () => {

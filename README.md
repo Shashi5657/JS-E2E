@@ -273,3 +273,72 @@ Function expressions allow functions to be assigned to variables, enabling more 
 > const arrString = arr.toString(); // Output: "1,2,3"
 >
 > > Tip: These methods are particularly useful for handling type conversion when dealing with user input or data transformations.
+
+### 🔀 Control Structures in JavaScript
+
+Control structures in JavaScript allow us to execute different blocks of code based on certain conditions, enhancing the dynamic flow of a program. Here are the primary types of control structures:
+
+1. if Statement
+   The if statement executes a block of code only if a specified condition is true.
+
+> let age = 18;
+>
+> if (age >= 18) {
+> console.log("You are eligible to vote.");
+> }
+> // Output: You are eligible to vote. 2. if...else Statement
+> The if...else statement allows for an alternative action when the initial condition is false.
+
+> let age = 16;
+>
+> if (age >= 18) {
+> console.log("You are eligible to vote.");
+> } else {
+> console.log("You are not eligible to vote yet.");
+> }
+> // Output: You are not eligible to vote yet. 3. else if Statement
+> The else if statement enables multiple conditions to be tested in sequence. If the first condition is false, it moves on to check the next condition.
+
+> let score = 85;
+>
+> if (score >= 90) {
+> console.log("Grade: A");
+> } else if (score >= 80) {
+> console.log("Grade: B");
+> } else if (score >= 70) {
+> console.log("Grade: C");
+> } else {
+> console.log("Grade: D");
+> }
+> // Output: Grade: B
+> Note: Only the first true condition’s code block will be executed. If no conditions are true, the else block runs, if present. 4. switch Statement
+> The switch statement is used to perform different actions based on the value of a single variable or expression. It’s often cleaner than a series of else if statements when dealing with many discrete values.
+
+> let day = 3;
+> let dayName;
+
+> switch (day) {
+> case 1:
+> dayName = "Monday";
+> break;
+> case 2:
+> dayName = "Tuesday";
+> break;
+> case 3:
+> dayName = "Wednesday";
+> break;
+> case 4:
+> dayName = "Thursday";
+> break;
+> case 5:
+> dayName = "Friday";
+> break;
+> case 6:
+> dayName = "Saturday";
+> break;
+> case 7:
+> dayName = "Sunday";
+> break;
+> default:
+> dayName = "Invalid day
+> }
