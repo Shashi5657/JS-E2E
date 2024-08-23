@@ -7,13 +7,15 @@ const calculateResult = (calculationType) => {
   const initialResult = currentResult;
 
   if (
-    calculationType !== "ADD" &&
-    calculationType !== "SUBTRACT" &&
-    calculationType !== "MULTIPLY" &&
-    calculationType !== "DIVIDE"
+    (calculationType !== "ADD" &&
+      calculationType !== "SUBTRACT" &&
+      calculationType !== "MULTIPLY" &&
+      calculationType !== "DIVIDE") ||
+    !enteredNumber // if entered number is 0 , 0 is a falsy value so !false is true, then it returns
   ) {
     return;
   }
+  
   let mathOperator;
   if (calculationType === "ADD") {
     currentResult += parseInt(enteredNumber);

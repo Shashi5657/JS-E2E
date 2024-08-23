@@ -286,8 +286,10 @@ Control structures in JavaScript allow us to execute different blocks of code ba
 > if (age >= 18) {
 > console.log("You are eligible to vote.");
 > }
-> // Output: You are eligible to vote. 2. if...else Statement
-> The if...else statement allows for an alternative action when the initial condition is false.
+> // Output: You are eligible to vote.
+
+2. if...else Statement
+ The if...else statement allows for an alternative action when the initial condition is false.
 
 > let age = 16;
 >
@@ -296,8 +298,10 @@ Control structures in JavaScript allow us to execute different blocks of code ba
 > } else {
 > console.log("You are not eligible to vote yet.");
 > }
-> // Output: You are not eligible to vote yet. 3. else if Statement
-> The else if statement enables multiple conditions to be tested in sequence. If the first condition is false, it moves on to check the next condition.
+> // Output: You are not eligible to vote yet.
+
+3. else if Statement
+ The else if statement enables multiple conditions to be tested in sequence. If the first condition is false, it moves on to check the next condition.
 
 > let score = 85;
 >
@@ -311,8 +315,10 @@ Control structures in JavaScript allow us to execute different blocks of code ba
 > console.log("Grade: D");
 > }
 > // Output: Grade: B
-> Note: Only the first true condition’s code block will be executed. If no conditions are true, the else block runs, if present. 4. switch Statement
-> The switch statement is used to perform different actions based on the value of a single variable or expression. It’s often cleaner than a series of else if statements when dealing with many discrete values.
+> Note: Only the first true condition’s code block will be executed. If no conditions are true, the else block runs, if present.
+
+4. switch Statement
+ The switch statement is used to perform different actions based on the value of a single variable or expression. It’s often cleaner than a series of else if statements when dealing with many discrete values.
 
 > let day = 3;
 > let dayName;
@@ -342,3 +348,76 @@ Control structures in JavaScript allow us to execute different blocks of code ba
 > default:
 > dayName = "Invalid day
 > }
+
+### 🟢 Truthy and 🔴 Falsy Values in JavaScript
+In JavaScript, every value is inherently either truthy or falsy when evaluated in a boolean context (such as if statements). Here’s a breakdown:
+
+#### 🔴 Falsy Values
+These are values that are treated as false in conditional expressions. The most common falsy values are:
+
+* 0 – The number zero.
+
+>if (0) {
+>  console.log("This won't run because 0 is falsy.");
+>}
+
+* "" (Empty String) – Any empty string, either '' or "".
+
+>if ("") {
+>  console.log("This won't run because an empty string is falsy.");
+>}
+
+* null – Represents the intentional absence of any object value.
+
+>let value = null;
+>if (value) {
+>  console.log("This won't run because null is falsy.");
+>}
+
+* undefined – The default value for uninitialized variables.
+
+>let value;
+>if (value) {
+>  console.log("This won't run because undefined is falsy.");
+>}
+
+* NaN – Represents a computational error, often the result of invalid number operations.
+
+>let value = NaN;
+>if (value) {
+>  console.log("This won't run because NaN is falsy.");
+>}
+
+* false – The boolean false itself.
+
+>if (false) {
+>  console.log("This won't run because false is obviously falsy.");
+>}
+Note: These values are consistently falsy, so any conditional expression evaluating them will result in false.
+
+#### 🟢 Truthy Values
+
+Anything not on the list above is considered truthy. Common examples of truthy values include:
+
+* Any Non-zero Number – Positive or negative numbers (e.g., 1, -10).
+
+>if (42) {
+>  console.log("This will run because non-zero numbers are truthy.");
+>}
+
+* Non-empty Strings – Any string with content, including whitespace (e.g., "hello", " ").
+
+>if ("hello") {
+>  console.log("This will run because non-empty strings are truthy.");
+>}
+
+* Objects and Arrays – Even empty objects {} and arrays [] are truthy.
+
+>if ({}) {
+>  console.log("This will run because {} is truthy.");
+>}
+
+>if ([]) {
+>  console.log("This will run because [] is truthy.");
+>}
+>>Note: Truthy values will result in true in conditional expressions, making them valuable in logical operations.
