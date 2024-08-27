@@ -1,4 +1,5 @@
 const ATTACK_VALUE = 10;
+const STRONG_ATTACK_VALUE = 15;
 const MONSTER_ATTACK_VALUE = 14;
 
 let chosenMaxLife = 100;
@@ -24,3 +25,4 @@ const attackMonster = () => {
 };
 
 attackBtn.addEventListener("click", attackMonster);
+strongAttackBtn.addEventListener('click', )
