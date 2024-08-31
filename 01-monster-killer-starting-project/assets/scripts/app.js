@@ -3,13 +3,24 @@ const STRONG_ATTACK_VALUE = 15;
 const MONSTER_ATTACK_VALUE = 14;
 const HEAL_VALUE = 10;
 
-let chosenMaxLife = 100;
+const enteredValue = prompt("Chose the maximum life to begin the play", "100");
+
+let chosenMaxLife = +enteredValue;
+
+if (isNaN(chosenMaxLife) || chosenMaxLife <= 0) {
+  chosenMaxLife = 100;
+}
 let currentMonsterHealth = chosenMaxLife;
 let currentPlayerHealth = chosenMaxLife;
 let hasBonusLife = true;
 
 adjustHealthBars(chosenMaxLife);
 
+const reset = () => {
+  currentPlayerHealth = chosenMaxLife;
+  currentMonsterHealth = chosenMaxLife;
+  resetGame(chosenMaxLife);
+};
 const endRound = () => {
   const initialPlayerHealth = currentPlayerHealth;
   const playerDamage = dealPlayerDamage(MONSTER_ATTACK_VALUE);
@@ -25,10 +36,13 @@ const endRound = () => {
 
   if (currentMonsterHealth <= 0 && currentPlayerHealth > 0) {
     alert("You won");
+    reset();
   } else if (currentPlayerHealth <= 0 && currentMonsterHealth > 0) {
     alert("Monster won");
+    reset();
   } else if (currentPlayerHealth <= 0 && currentMonsterHealth <= 0) {
     alert("Its a Draw");
+    reset();
   }
 };
 
