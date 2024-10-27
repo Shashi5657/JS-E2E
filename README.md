@@ -13,8 +13,6 @@ There are several ways to include JavaScript within an HTML file:
 1. Inline JavaScript
 Write JavaScript code directly inside <script> tags in the <head> section:
 
-html
-Copy code
 <head>
   <script>
     alert("This Works!");
@@ -23,41 +21,35 @@ Copy code
 2. External JavaScript
 Use the src attribute of the <script> tag to link to an external JavaScript file:
 
-html
-Copy code
 <script src="assets/scripts/app.js"></script>
 Note: Placing this script in the <head> section can block the rendering of the page until the script finishes executing.
 
 3. Deferred Loading (Recommended)
 To avoid blocking page load, place the <script> tag just before the closing </body> tag. This allows the script to load after all HTML content has been rendered:
 
-html
-Copy code
 <body>
   <!-- HTML content -->
   <script src="assets/scripts/app.js"></script>
 </body>
+
 📦 Variables in JavaScript
 Variables are containers used to store data values. JavaScript supports multiple ways to define variables:
 
 let
 The let keyword declares a variable whose value can be changed.
 
-javascript
-Copy code
 let username = "Shashi";
 username = "Shashidhar"; // Reassignment is allowed
 const
 The const keyword declares a variable with a fixed value that cannot be changed.
 
-javascript
-Copy code
 const age = 24;
 // age = 25; // This would throw an error since `age` is a constant
 Naming Conventions
 Use meaningful names for variables.
 Follow camelCase for readability (e.g., userName, totalScore).
 Avoid starting variable names with numbers or special characters.
+
 🔧 Operators in JavaScript
 Operators are symbols or keywords that perform operations on values. JavaScript includes several types of operators:
 
@@ -74,8 +66,6 @@ Operator	Example	Description
 Assignment Operators
 Assign values to variables.
 
-javascript
-Copy code
 let count = 10;
 count += 5; // Equivalent to count = count + 5
 Comparison Operators
