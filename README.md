@@ -18,6 +18,7 @@ Write JavaScript code directly inside <script> tags in the <head> section:
     alert("This Works!");
   </script>
 </head>
+
 2. External JavaScript
 Use the src attribute of the <script> tag to link to an external JavaScript file:
 
